@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.js4ms</groupId>
+    <artifactId>js4ms</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>org.js4ms.jws.reflector</groupId>
+  <artifactId>js4ms-jws-reflector</artifactId>
+  <packaging>pom</packaging>
+  <name>${project.artifactId}</name>
+  <description>Parent project for the RTSP multicast reflector Java Web Start application.</description>
+  <properties>
+    <application.title>JS4MS RTSP Multicast Reflector</application.title>
+    <application.description>A Java Web Start application that provides access to multicast streams via the RTSP and AMT protocols.</application.description>
+    <application.version>${project.version}</application.version>
+    <application.baseClassName>RtspMulticastReflectorApp</application.baseClassName>
+    <application.fullClassName>${project.groupId}.${application.baseClassName}</application.fullClassName>
+    <application.baseJarName>${application.baseClassName}</application.baseJarName>
+    <application.baseJarFile>${application.baseJarName}.jar</application.baseJarFile>
+    <application.baseJarVersion>${application.version}</application.baseJarVersion>
+    <application.finalJarVersion>${application.baseJarVersion}.${maven.build.timestamp}</application.finalJarVersion>
+    <application.finalJarName>${application.baseJarName}__V${application.finalJarVersion}</application.finalJarName>
+    <application.finalJarFile>${application.finalJarName}.jar</application.finalJarFile>
+    <application.jnlpFile>${application.baseJarName}.jnlp</application.jnlpFile>
+  </properties>
+  <build>
+    <plugins>
+       <plugin>
+          <groupId>org.codehaus.groovy.maven</groupId>
+          <artifactId>gmaven-plugin</artifactId>
+          <executions>
+             <execution>
+                <goals>
+                   <goal>execute</goal>
+                </goals>
+                <configuration>
+                   <source>
+                   import java.util.Date 
+                   import java.text.MessageFormat
+                   project.properties['application.lastModified'] = MessageFormat.format("{0,date,EEE, dd MMM yyyy HH:mm:ss zzz}", new Date())
+                   project.properties['application.timestamp'] = MessageFormat.format("{0,date,yyyy-MM-dd HH:mm:ss}", new Date())
+                   </source>
+                </configuration>
+             </execution>
+          </executions>
+       </plugin>
+    </plugins>
+  </build>
+  <modules>
+    <module>jnlp-app</module>
+    <module>jnlp-webapp</module>
+  </modules>
+</project>
