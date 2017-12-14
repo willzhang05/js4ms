@@ -30,8 +30,8 @@ import org.js4ms.io.channel.OutputChannel;
 
 
 /**
- * An {@link OutputChannel} that can be used to send {@link UdpDatagram} instances to a
- * {@link UdpEndpoint}.
+ * An { @link OutputChannel } that can be used to send { @link UdpDatagram } instances to a
+ * { @link UdpEndpoint }.
  * 
  * @author Gregory Bumgardner (gbumgard)
  */
@@ -61,7 +61,7 @@ public final class UdpOutputChannel
 
     /**
      * Closes this channel. This implementation does nothing.
-     * Call {@link UdpEndpoint#close()} to close the UDP endpoint.
+     * Call { @link UdpEndpoint#close() } to close the UDP endpoint.
      */
     @Override
     public final void close() {

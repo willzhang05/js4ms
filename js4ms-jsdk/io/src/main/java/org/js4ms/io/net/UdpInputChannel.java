@@ -30,8 +30,8 @@ import org.js4ms.io.channel.InputChannel;
 
 
 /**
- * An {@link InputChannel} that can be used to receive {@link UdpDatagram} instances from
- * a {@link UdpEndpoint}.
+ * An { @link InputChannel } that can be used to receive { @link UdpDatagram } instances from
+ * a { @link UdpEndpoint }.
  * 
  * @author Gregory Bumgardner (gbumgard)
  */
@@ -61,7 +61,7 @@ public final class UdpInputChannel
 
     /**
      * Closes this channel. This implementation does nothing.
-     * Call {@link UdpEndpoint#close()} to close the endpoint.
+     * Call { @link UdpEndpoint#close() } to close the endpoint.
      */
     @Override
     public void close() {

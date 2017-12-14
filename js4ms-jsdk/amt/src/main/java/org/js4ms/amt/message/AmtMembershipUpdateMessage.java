@@ -44,6 +44,7 @@ import org.js4ms.ip.protocol.mld.MLDv1ReportMessage;
 
 
 /**
+ * { @code
  * Represents an AMT Membership Update message.
  * The following description is excerpted from <a
  * href="http://tools.ietf.org/html/draft-ietf-mboned-auto-multicast">Automatic Multicast
@@ -156,7 +157,7 @@ import org.js4ms.ip.protocol.mld.MLDv1ReportMessage;
  * </dd>
  * </dl>
  * </blockquote>
- * 
+ * }
  * @author Greg Bumgardner (gbumgard)
  */
 public final class AmtMembershipUpdateMessage

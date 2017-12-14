@@ -46,6 +46,7 @@ import org.js4ms.ip.protocol.mld.MLDv2QueryMessage;
 
 
 /**
+ * { @code
  * Represents an AMT Membership Query message.
  * The following description is excerpted from the <a
  * href="http://tools.ietf.org/html/draft-ietf-mboned-auto-multicast">Automatic Multicast
@@ -198,7 +199,7 @@ import org.js4ms.ip.protocol.mld.MLDv2QueryMessage;
  * </blockquote>
  * </dl>
  * </blockquote>
- * 
+ * }
  * @see <a
  *      href="http://tools.ietf.org/html/draft-ietf-mboned-auto-multicast">draft-ietf-auto-multicast</a>
  * @author Greg Bumgardner (gbumgard)

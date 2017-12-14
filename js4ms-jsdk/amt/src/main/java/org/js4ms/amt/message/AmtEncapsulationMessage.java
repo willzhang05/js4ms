@@ -34,8 +34,8 @@ import org.js4ms.ip.IPPacket;
 
 
 /**
- * Base class for AMT message classes that carry an IP packet payload.<br/>
- * 
+ * Base class for AMT message classes that carry an IP packet payload.
+ *
  * @see AmtMembershipQueryMessage
  * @see AmtMembershipUpdateMessage
  * @see AmtMulticastDataMessage

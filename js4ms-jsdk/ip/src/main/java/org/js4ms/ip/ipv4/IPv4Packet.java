@@ -55,7 +55,8 @@ import org.js4ms.ip.IPPayload;
 
 
 /**
- * An IPv4 packet as described in [<a
+ * { @code
+ *  * An IPv4 packet as described in [<a
  * href="http://tools.ietf.org/html/rfc791">RFC-791</a>]. <h3>Packet Format</h3>
  * <blockquote>
  * 
@@ -82,7 +83,7 @@ import org.js4ms.ip.IPPayload;
  * <dd>The Version field indicates the format of the internet header. This document
  * describes version 4.
  * <p>
- * See {@link #getVersion()}.</dd>
+ * See { @link #getVersion() }.</dd>
  * <p>
  * <dt><u>IHL</u></dt>
  * <p>
@@ -90,7 +91,7 @@ import org.js4ms.ip.IPPayload;
  * thus points to the beginning of the data. Note that the minimum value for a correct
  * header is 5.
  * <p>
- * See {@link #getHeaderLength()}.</dd>
+ * See { @link #getHeaderLength() }.</dd>
  * <p>
  * <dt><u>Type of Service or Differentiated Services Field</u></dt>
  * <p>
@@ -150,7 +151,7 @@ import org.js4ms.ip.IPPayload;
  * network, it is the responsibility of that network to control the access to, and use of,
  * those precedence designations.
  * <p>
- * See {@link #getTypeOfService()}, {@link #setTypeOfService(byte)}.</dd>
+ * See { @link #getTypeOfService() }, { @link #setTypeOfService(byte) }.</dd>
  * <p>
  * <dt><u>Total Length</u></dt>
  * <p>
@@ -167,14 +168,14 @@ import org.js4ms.ip.IPPayload;
  * is 60 octets, and a typical internet header is 20 octets, allowing a margin for headers
  * of higher level protocols.
  * <p>
- * See {@link #getTotalLength()}.</dd>
+ * See { @link #getTotalLength() }.</dd>
  * <p>
  * <dt><u>Identification</u></h2>
  * <p>
  * <dd>An identifying value assigned by the sender to aid in assembling the fragments of a
  * datagram.
  * <p>
- * See {@link #getIdentification()}, {@link #setIdentification(short)}.</dd>
+ * See { @link #getIdentification() }, { @link #setIdentification(short) }.</dd>
  * <dt><u>Flags</u></dt>
  * <p>
  * <dd>Various Control Flags.
@@ -191,15 +192,15 @@ import org.js4ms.ip.IPPayload;
  * </pre>
  * 
  * <p>
- * See {@link #getDoNotFragment()}, {@link #setDoNotFragment(boolean)},
- * {@link #getMoreFragments()}, {@link #setMoreFragments(boolean)}.</dd>
+ * See { @link #getDoNotFragment() }, { @link #setDoNotFragment(boolean) },
+ * { @link #getMoreFragments() }, { @link #setMoreFragments(boolean) }.</dd>
  * <p>
  * <dt><u>Fragment Offset</u></dt>
  * <p>
  * <dd>This field indicates where in the datagram this fragment belongs. The fragment
  * offset is measured in units of 8 octets (64 bits). The first fragment has offset zero.
  * <p>
- * See {@link #getFragmentOffset()}, {@link #setFragmentOffset(short)}.</dd>
+ * See { @link #getFragmentOffset() }, { @link #setFragmentOffset(short) }.</dd>
  * <p>
  * <dt><u>Time to Live</u></dt>
  * <p>
@@ -212,7 +213,7 @@ import org.js4ms.ip.IPPayload;
  * to cause undeliverable datagrams to be discarded, and to bound the maximum datagram
  * lifetime.
  * <p>
- * See {@link #getTTL()}, {@link #setTTL(byte)}.</dd>
+ * See { @link #getTTL() }, { @link #setTTL(byte) }.</dd>
  * <p>
  * <dt><u>Protocol</u></dt>
  * <p>
@@ -220,8 +221,8 @@ import org.js4ms.ip.IPPayload;
  * internet datagram. The values for various protocols are specified in &quot;Assigned
  * Numbers&quot; [9].
  * <p>
- * See {@link #getProtocol()}, {@link #setProtocol(byte)},
- * {@link #addProtocolMessage(IPMessage)}.</dd>
+ * See { @link #getProtocol() }, { @link #setProtocol(byte) },
+ * { @link #addProtocolMessage(IPMessage) }.</dd>
  * <p>
  * <dt><u>Header Checksum</u></dt>
  * <p>
@@ -237,19 +238,19 @@ import org.js4ms.ip.IPPayload;
  * adequate, but it is provisional and may be replaced by a CRC procedure, depending on
  * further experience.
  * <p>
- * See {@link #getHeaderChecksum()}, {@link #setHeaderChecksum(short)}.</dd>
+ * See { @link #getHeaderChecksum() }, { @link #setHeaderChecksum(short) }.</dd>
  * <p>
  * <dt><u>Source Address</u></dt>
  * <p>
  * <dd>The source address. See [RFC-791 Section 3.2].
  * <p>
- * See {@link #getSourceAddress()}, {@link #setSourceAddress(byte[])}.</dd>
+ * See { @link #getSourceAddress() }, { @link #setSourceAddress(byte[]) }.</dd>
  * <p>
  * <dt><u>Destination Address</u></dt>
  * <p>
  * <dd>The destination address. See [RFC-791 Section 3.2].
  * <p>
- * See {@link #getDestinationAddress()}, {@link #setDestinationAddress(byte[])}.</dd>
+ * See { @link #getDestinationAddress() }, { @link #setDestinationAddress(byte[]) }.</dd>
  * <p>
  * <dt><u>Options</u></dt>
  * <p>
@@ -257,9 +258,10 @@ import org.js4ms.ip.IPPayload;
  * modules (host and gateways). What is optional is their distribution in any particular
  * datagram, not their implementation.
  * <p>
- * See {@link #getOptions()}, {@link #addOption(IPHeaderOption)}.</dd>
+ * See { @link #getOptions() }, { @link #addOption(IPHeaderOption) }.</dd>
  * </dl>
  * </blockquote>
+ * }
  * 
  * @author Gregory Bumgardner
  */
@@ -1442,7 +1444,7 @@ public final class IPv4Packet
      * Sets the Source Address field value.
      * See {@link #getSourceAddress()}.
      * 
-     * @param sourceAddress
+     * @param address
      *            - an IPv4 address.
      */
     public void setSourceAddress(final byte[] address) {
@@ -1516,7 +1518,7 @@ public final class IPv4Packet
      * Sets the Destination Address field value.
      * See {@link #getDestinationAddress()}.
      * 
-     * @param destinationAddress
+     * @param address
      *            - an IPv4 address.
      */
     public void setDestinationAddress(final byte[] address) {

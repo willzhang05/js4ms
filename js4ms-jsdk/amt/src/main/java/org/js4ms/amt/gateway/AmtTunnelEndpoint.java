@@ -170,7 +170,9 @@ class AmtTunnelEndpoint
 
     /**
      * @param relayDiscoveryAddress
-     * @param dispatchChannel
+     * @param incomingPacketChannel
+     * @param protocol
+     *
      *            The channel that will receive packets extracted from Membership Query
      *            and Multicast Data messages.
      * @throws IOException

@@ -36,6 +36,7 @@ import org.js4ms.ip.IPMultiByteHeaderOption;
 
 
 /**
+ * { @code
  * Represents an IPv4 Router Alert Option. <h3>Option Format</h3> <blockquote>
  * 
  * <pre>
@@ -57,7 +58,7 @@ import org.js4ms.ip.IPMultiByteHeaderOption;
  * </pre>
  * 
  * <p>
- * See {@link #getCopyFlag()}, {@link #getOptionClass()}, {@link #getOptionNumber()}.</dd>
+ * See { @link #getCopyFlag() }, { @link #getOptionClass() }, { @link #getOptionNumber() }.</dd>
  * <p>
  * <dt><u>Length</u></dt>
  * <p>
@@ -73,10 +74,10 @@ import org.js4ms.ip.IPMultiByteHeaderOption;
  * </pre>
  * 
  * <p>
- * See {@link #getRouterAlertValue()}, {@link #setRouterAlertValue(short)}.</dd>
+ * See { @link #getRouterAlertValue() }, { @link #setRouterAlertValue(short) }.</dd>
  * </dl>
  * </blockquote>
- * 
+ * }
  * @author Gregory Bumgardner
  */
 public final class IPv4RouterAlertOption

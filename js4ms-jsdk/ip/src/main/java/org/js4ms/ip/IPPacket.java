@@ -44,9 +44,9 @@ import org.js4ms.common.util.logging.Logging;
 
 
 /**
- * Base class for the {@link org.js4ms.ip.ipv4.IPv4Packet IPv4Packet} and
- * {@link org.js4ms.ip.ipv6.IPv6Packet IPv6Packet} classes.
- * 
+ * Base class for the { @link org.js4ms.ip.ipv4.IPv4Packet IPv4Packet } and
+ * { @link org.js4ms.ip.ipv6.IPv6Packet IPv6Packet } classes.
+ *
  * @author Gregory Bumgardner (gbumgard)
  */
 public abstract class IPPacket
@@ -55,7 +55,7 @@ public abstract class IPPacket
     /*-- Inner Classes ------------------------------------------------------*/
 
     /**
-     * 
+     *
      */
     public static interface ParserType
                     extends KeyedBufferParser<IPPacket>, KeyedStreamParser<IPPacket> {
@@ -65,7 +65,7 @@ public abstract class IPPacket
     }
 
     /**
-     * 
+     *
      */
     public static class BufferParser
                     extends BufferParserSelector<IPPacket> {
@@ -88,7 +88,7 @@ public abstract class IPPacket
     }
 
     /**
-     * 
+     *
      */
     public static class StreamParser
                     extends StreamParserSelector<IPPacket> {
@@ -149,7 +149,7 @@ public abstract class IPPacket
 
     /**
      * Logs value of member variables declared or maintained by this class.
-     * 
+     *
      * @param logger
      */
     private void logState(final Logger logger, final Level level) {
@@ -159,7 +159,7 @@ public abstract class IPPacket
     /**
      * Updates the checksum of a IP packet contained in the byte buffer.
      * Only applies to IPv4 but required for consistency with other message types.
-     * 
+     *
      * @param buffer
      *            - a ByteBuffer containing a packet image.
      */
@@ -167,14 +167,14 @@ public abstract class IPPacket
 
     /**
      * Gets the current header version field value.
-     * 
+     *
      * <pre>
-     *   0               1               2               3 
+     *   0               1               2               3
      *  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
      *  |Version|       |               |                               |
      *  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
      * </pre>
-     * 
+     *
      * @return
      */
     public final byte getVersion() {
@@ -210,7 +210,7 @@ public abstract class IPPacket
 
     /**
      * Indicates that the packet carries a datagram fragment and not a complete datagram.
-     * 
+     *
      * @return
      */
     public final boolean isFragmented() {
@@ -222,9 +222,9 @@ public abstract class IPPacket
      * datagram.
      * Only applies to packets that carry datagram fragments, but will return
      * <code>true</code> if the packet carries a complete datagram.
-     * 
+     *
      * @return
-     * @see {@link #isFragmented()}
+     * @see { @link #isFragmented() }
      */
     public final boolean isFirstFragment() {
         return getFragmentOffset() == 0 && isMoreFragments();
@@ -235,9 +235,9 @@ public abstract class IPPacket
      * datagram.
      * Only applies to packets that carry datagram fragments, but will return
      * <code>false</code> if the packet carries a complete datagram.
-     * 
+     *
      * @return
-     * @see {@link #isFragmented()}
+     * @see { @link #isFragmented() }
      */
     public final boolean isLastFragment() {
         return getFragmentOffset() != 0 && !isMoreFragments();
@@ -249,16 +249,16 @@ public abstract class IPPacket
      * Returns <code>false</code> if this packet carries the last, or right-most fragment
      * of a datagram
      * or if the packet carries a complete datagram.
-     * 
+     *
      * @return
-     * @see {@link #isFragmented()}
+     * @see { @link #isFragmented() }
      */
     public abstract boolean isMoreFragments();
 
     /**
      * Returns the temporally unique identifier assigned to all fragments that comprise a
      * single datagram.
-     * 
+     *
      * @return
      */
     public abstract int getFragmentIdentifier();
@@ -266,7 +266,7 @@ public abstract class IPPacket
     /**
      * Returns the fragment location within the original datagram.
      * The fragment offset is expressed in 8-byte units.
-     * 
+     *
      * @return
      */
     public abstract int getFragmentOffset();
@@ -275,7 +275,7 @@ public abstract class IPPacket
      * Returns the datagram fragment carried by this packet.
      * If the packet carries a complete datagram, this method will return
      * the unparsed portion of the packet payload.
-     * 
+     *
      * @return
      */
     public abstract ByteBuffer getFragment();
@@ -409,8 +409,8 @@ public abstract class IPPacket
      * Calculates upper-layer message checksum for protocols that include
      * an IP pseudo header in the checksum calculation.
      * This function is typically called from concrete implementations of the
-     * {@link IPMessage#calculateChecksum(byte[], int, byte[], byte[])
-     * IPMessage.calculateChecksum()} method.
+     * { @link IPMessage#calculateChecksum(byte[], int, byte[], byte[])
+     * IPMessage.calculateChecksum() } method.
      * <p>
      * The Checksum is the 16-bit one's complement of the one's complement sum of the
      * whole upper layer packet and a pseudo header consisting of values from the IP
@@ -422,7 +422,7 @@ public abstract class IPPacket
      * including header.
      * <p>
      * The IPv4 pseudo header has the following format:
-     * 
+     *
      * <pre>
      *  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
      *  |                        Source Address                         |
@@ -432,9 +432,9 @@ public abstract class IPPacket
      *  |      Zero     |    Protocol   |   Upper-Layer Packet Length   |
      *  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
      * </pre>
-     * 
+     *
      * The IPv6 pseudo header has a similar format:
-     * 
+     *
      * <pre>
      *  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
      *  |                                                               |
@@ -458,7 +458,7 @@ public abstract class IPPacket
      *  |                      zero                     |  Next Header  |
      *  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
      * </pre>
-     * 
+     *
      * If the IPv6 packet contains a Routing header, the Destination Address used in the
      * pseudo-header is that of the final destination. At the originating node, that
      * address will be in the last element of the Routing header; at the recipient(s),
@@ -492,8 +492,8 @@ public abstract class IPPacket
      * See <a href="http://www.ietf.org/rfc/rfc768.txt">[RFC-768]</a> and <a
      * href="http://www.ietf.org/rfc/rfc2460.txt">[RFC-2460]</a>
      * <p>
-     * 
-     * @see IPMessage#calculateChecksum(byte[], int, byte[], byte[])
+     *
+     * @see { @link IPMessage#calculateChecksum(byte[], int, byte[], byte[]) }
      * @param buffer
      *            - the ByteBuffer containing the upper-layer message.
      * @param checksumField
@@ -584,8 +584,8 @@ public abstract class IPPacket
     /**
      * Calculates upper-layer message checksum.
      * This function is typically called from concrete implementations of the
-     * {@link IPMessage#calculateChecksum(byte[], int, byte[], byte[])
-     * IPMessage.calculateChecksum()} method.
+     * { @link IPMessage#calculateChecksum(byte[], int, byte[], byte[])
+     * IPMessage.calculateChecksum() } method.
      * <p>
      * The Checksum is the 16-bit one's complement of the one's complement sum of the
      * whole upper layer packet. While computing the checksum, the Checksum field will be
@@ -596,12 +596,6 @@ public abstract class IPPacket
      *            - the ByteBuffer containing the upper-layer message.
      * @param checksumField
      *            - A Field object that is used to extract and clear the checksum value.
-     * @param sourceAddress
-     *            An IPv4 (4-byte) or IPv6 (16-byte) address. Size must match that of the
-     *            destination address.
-     * @param destinationAddress
-     *            An IPv4 (4-byte) or IPv6 (16-byte) address. Size must match that of the
-     *            destination address.
      * @param packetLength
      *            - the total length of the upper-layer message.
      * @return

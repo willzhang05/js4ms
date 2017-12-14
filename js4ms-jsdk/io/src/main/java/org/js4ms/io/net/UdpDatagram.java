@@ -487,7 +487,6 @@ public final class UdpDatagram
 
     /**
      * @param destinationAddress
-     * @param destinationPort
      */
     public void setDestinationAddress(final InetSocketAddress destinationAddress) {
 

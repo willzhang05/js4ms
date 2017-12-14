@@ -42,7 +42,7 @@ public interface MessageTransform<InputMessageType, OutputMessageType> {
      * @param message
      *            The message to transform or modify.
      * @return The new or modified message.
-     * @throws Exception
+     * @throws IOException
      *             The transformation failed.
      */
     OutputMessageType transform(InputMessageType message) throws IOException;

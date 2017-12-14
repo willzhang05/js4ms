@@ -55,7 +55,8 @@ public abstract class BufferBackedObject
 
     /**
      * Creates a buffer containing bytes read from an InputStream.
-     * 
+     * @param is
+     * @param size
      * @throws IOException
      */
     public static ByteBuffer consume(final InputStream is, final int size) throws IOException {

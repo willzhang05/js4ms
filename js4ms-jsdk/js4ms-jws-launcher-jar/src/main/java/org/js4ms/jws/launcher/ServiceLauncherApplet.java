@@ -20,26 +20,20 @@
 
 package org.js4ms.jws.launcher;
 
+import org.js4ms.common.util.logging.Log;
+import org.js4ms.common.util.logging.Logging;
+import org.js4ms.launcher.jws.ServiceLauncher;
+
 import java.applet.Applet;
 import java.io.File;
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLStreamHandler;
+import java.net.*;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
 import java.util.Properties;
 import java.util.jar.Attributes;
 import java.util.jar.Manifest;
 import java.util.logging.Logger;
-
-import org.js4ms.common.util.logging.Log;
-import org.js4ms.common.util.logging.Logging;
-import org.js4ms.launcher.jws.ServiceLauncher;
 
 /**
  * @author Greg Bumgardner (gbumgard)

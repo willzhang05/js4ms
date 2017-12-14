@@ -36,7 +36,7 @@ import org.js4ms.io.channel.OutputChannel;
 
 
 /**
- * An {@link OutputChannel} that can be used to send a byte array containing an
+ * An { @link OutputChannel } that can be used to send a byte array containing an
  * RTP/RTCP packet to a specific address and port via UDP.
  * 
  * @author Greg Bumgardner (gbumgard)
@@ -59,8 +59,6 @@ public class UdpPacketOutputChannel
      * 
      * @param socket
      *            - The datagram socket to use when sending packets.
-     * @throws IOException
-     *             If an I/O occurs during construction of the underlying DatagramSocket.
      */
     public UdpPacketOutputChannel(final DatagramSocket socket) {
         this.socket = socket;
