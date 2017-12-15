@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="amt" />
+        <module name="common" />
+        <module name="http" />
+        <module name="io" />
+        <module name="ip" />
+        <module name="js4ms-jws-launcher" />
+        <module name="launcher" />
+        <module name="reflector" />
+        <module name="rest" />
+        <module name="rtsp" />
+        <module name="server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="amt" target="1.7" />
+      <module name="common" target="1.7" />
+      <module name="http" target="1.7" />
+      <module name="io" target="1.7" />
+      <module name="ip" target="1.7" />
+      <module name="js4ms-jsdk" target="1.5" />
+      <module name="js4ms-jws-launcher" target="1.7" />
+      <module name="launcher" target="1.7" />
+      <module name="reflector" target="1.7" />
+      <module name="rest" target="1.7" />
+      <module name="rtsp" target="1.7" />
+      <module name="server" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

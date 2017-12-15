@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Maven: junit:junit:3.8.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/junit/junit/3.8.1/junit-3.8.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/junit/junit/3.8.1/junit-3.8.1-javadoc.jar!/" />
+      <root url="file://$PROJECT_DIR$/../javadoc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/junit/junit/3.8.1/junit-3.8.1-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../jnlp-download-servlet/src/main/java" />
+      <root url="file://$PROJECT_DIR$/amt/src/main/java" />
+      <root url="file://$PROJECT_DIR$/common/src/main/java" />
+      <root url="file://$PROJECT_DIR$/http/src/main/java" />
+      <root url="file://$PROJECT_DIR$/io/src/main/java" />
+      <root url="file://$PROJECT_DIR$/ip/src/main/java" />
+      <root url="file://$PROJECT_DIR$/js4ms-jws-launcher-jar/src/main/java" />
+      <root url="file://$PROJECT_DIR$/launcher/src/main/java" />
+      <root url="file://$PROJECT_DIR$/reflector/src/main/java" />
+      <root url="file://$PROJECT_DIR$/rest/src/main/java" />
+      <root url="file://$PROJECT_DIR$/rtsp/src/main/java" />
+      <root url="file://$PROJECT_DIR$/server/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../js4ms-jws-reflector/jnlp-app/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

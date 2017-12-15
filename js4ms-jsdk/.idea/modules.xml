@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/amt/amt.iml" filepath="$PROJECT_DIR$/amt/amt.iml" group="js4ms-jsdk and modules" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" group="js4ms-jsdk and modules" />
+      <module fileurl="file://$PROJECT_DIR$/http/http.iml" filepath="$PROJECT_DIR$/http/http.iml" group="js4ms-jsdk and modules" />
+      <module fileurl="file://$PROJECT_DIR$/io/io.iml" filepath="$PROJECT_DIR$/io/io.iml" group="js4ms-jsdk and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ip/ip.iml" filepath="$PROJECT_DIR$/ip/ip.iml" group="js4ms-jsdk and modules" />
+      <module fileurl="file://$PROJECT_DIR$/js4ms-jws-launcher-jar/js4ms-jws-launcher.iml" filepath="$PROJECT_DIR$/js4ms-jws-launcher-jar/js4ms-jws-launcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/launcher/launcher.iml" filepath="$PROJECT_DIR$/launcher/launcher.iml" group="js4ms-jsdk and modules" />
+      <module fileurl="file://$PROJECT_DIR$/reflector/reflector.iml" filepath="$PROJECT_DIR$/reflector/reflector.iml" group="js4ms-jsdk and modules" />
+      <module fileurl="file://$PROJECT_DIR$/rest/rest.iml" filepath="$PROJECT_DIR$/rest/rest.iml" group="js4ms-jsdk and modules" />
+      <module fileurl="file://$PROJECT_DIR$/rtsp/rtsp.iml" filepath="$PROJECT_DIR$/rtsp/rtsp.iml" group="js4ms-jsdk and modules" />
+      <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" group="js4ms-jsdk and modules" />
+    </modules>
+  </component>
+</project>
